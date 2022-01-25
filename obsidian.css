@@ -1,5 +1,5 @@
 /*───────────────────────────────────────────────────────
-THINGS
+OLIO
 Version 1.6.4
 Created by @colineckert
 
@@ -36,6 +36,7 @@ SOFTWARE.
 ----------------------------------------------------------------
 
 For help and/or CSS snippets, thanks to:
+- @colineckert
 - @kepano
 - @chetachiezikeuzor
 
@@ -101,7 +102,7 @@ For help and/or CSS snippets, thanks to:
   /* Colors, sizes, weights, padding */
 
   --h1-color: var(--text-normal);
-  --h2-color: var(--blue);
+  --h2-color: var(--text-normal);
   --h3-color: var(--blue);
   --h4-color: var(--yellow);
   --h5-color: var(--red);
@@ -1849,8 +1850,8 @@ input[type='checkbox']:checked {
   padding-bottom: 0.5em;
 }
 .markdown-preview-view ul > li.task-list-item.is-checked {
-  text-decoration: none;
-  color: var(--text-normal);
+  text-decoration: line-through;
+  color: var(--text-faint);
 }
 .markdown-preview-view .task-list-item-checkbox {
   width: 16px;
@@ -2751,6 +2752,10 @@ body.links-int-on .markdown-preview-view .internal-link,
 body.links-ext-on .external-link,
 .external-link {
   text-decoration: underline;
+}
+/* Add proper hierarchy */
+.internal-link:after {
+    content: '\1F517';
 }
 
 .footnotes-list {
